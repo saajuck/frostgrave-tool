@@ -1,0 +1,562 @@
+[
+    {
+        "school": 6,
+        "name": "Absorption de connaissances",
+        "description": "Wizard uniquement. Ce sort permet à un wizard d'absorber les connaissances d'un ouvrage écrit sans avoir à le lire. Un wizard gagne immédiatement 40 points d'expérience pour avoir lancé ce sort, représentant la rapidité avec laquelle il peut acquérir des connaissances. Cette expérience ne compte pas dans le maximum qui peut être gagné en une partie. Ce sort ne peut être lancé qu'après une partie dans laquelle le wizard n'a pas été réduit à 0 Health.",
+        "targetNumber": 12,
+        "type": "Hors jeu (A)"
+    },
+    {
+        "school": 10,
+        "name": "Compagnon animal",
+        "description": "Le lanceur de sorts invoque un compagnon animal de son choix parmi les options suivantes pour devenir un membre permanent de sa warband : ours (page 179), crapaud des glaces (page 180), léopard des neiges (page 182), ou loup (page 182). Tous les compagnons animaux comptent comme des soldats standards. Les compagnons animaux sont plus volontaires que les exemples sauvages de leur espèce et reçoivent un bonus permanent de +3 Will. Un lanceur de sorts ne peut avoir qu'un seul compagnon animal à la fois.",
+        "targetNumber": 10,
+        "type": "Hors jeu (B)"
+    },
+    {
+        "school": 3,
+        "name": "Animer un construct",
+        "description": "On suppose que le lanceur de sorts a construit un construct avant d'utiliser ce sort pour l'animer. Si le sort est lancé avec succès, le construct devient immédiatement un membre permanent de la warband, prenant la place d'un soldat. Un lanceur de sorts doit déclarer la taille du construct qu'il tente d'animer (petit, moyen ou grand – page 183) avant de lancer le dé pour lancer le sort. Plus le construct est grand, plus il est difficile à animer, donc les modificateurs suivants sont appliqués au jet de lancement : Petit -0, Moyen -3, Grand -6. Il n'y a pas de limite au nombre de constructs dans une warband en dehors des limites normales pour les soldats. Les grands constructs comptent comme des soldats spécialistes, les autres comme des soldats standards.",
+        "targetNumber": 10,
+        "type": "Hors jeu (B)"
+    },
+    {
+        "school": 5,
+        "name": "Crâne animé",
+        "description": "Le lanceur de sorts remplit un crâne de malveillance magique et le lance sur un adversaire. Placez un crâne animé (page 190) à moins de 6\" du lanceur de sorts. Il peut être placé directement au combat. Ce crâne est une créature non contrôlée. Le lanceur de sorts ne peut pas lancer ce sort à nouveau jusqu'à ce que cette créature soit retirée de la table, mais peut dépenser une action pour annuler le sort, auquel cas le crâne animé est immédiatement retiré de la table.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 7,
+        "name": "Vigilance",
+        "description": "Si ce lanceur de sorts est sur la table, sa warband peut ajouter +2 à ses jets d'Initiative pour déterminer uniquement le joueur principal. Ce bonus s'accumule, donc si le wizard et l'apprentice ont tous deux lancé ce sort et sont tous deux sur la table, le joueur peut ajouter +4 à ses jets d'Initiative. Le bonus maximum possible est +4. Ce sort compte comme actif sur le lanceur de sorts pendant la partie et peut être annulé par tout ce qui annule les sorts.",
+        "targetNumber": 12,
+        "type": "Hors jeu (B)"
+    },
+    {
+        "school": 9,
+        "name": "Bannir",
+        "description": "Tous les démons dans la ligne de vue du lanceur de sorts doivent réussir immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si un démon échoue au jet et que son Will actuel est +4 ou moins, il est immédiatement réduit à 0 Health et retiré de la table. Si son Will actuel est +5 ou plus, il subit des dégâts égaux à trois fois le montant par lequel il a échoué au jet de Will.",
+        "targetNumber": 1,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 4,
+        "name": "Beauté",
+        "description": "Ce sort fait que quiconque regarde le lanceur de sorts voit un parangon de beauté. Tout membre d'une warband adverse doit faire un jet de Will avec un Target Number égal au jet de lancement s'il souhaite faire l'une des actions suivantes : se déplacer au combat avec le lanceur de sorts, faire une attaque à distance qui pourrait potentiellement toucher le lanceur de sorts (y compris les attaques à distance générées par des sorts), ou lancer tout sort qui cible le lanceur de sorts. Les lanceurs de sorts peuvent renforcer ce jet de Will de la même manière qu'ils le feraient pour résister à un sort. Une figurine ne peut tenter un tel jet de Will qu'une fois par tour. Ce sort n'a aucun effet sur les créatures (tout ce qui se trouve au chapitre six : Bestiaire, page 176) ou les chiens de guerre.",
+        "targetNumber": 10,
+        "type": "Soi-même"
+    },
+    {
+        "school": 9,
+        "name": "Lumière aveuglante",
+        "description": "La cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si elle échoue, elle ne peut pas attaquer, tirer ou lancer des sorts de Ligne de vue. Sa stat Fight est réduite à +0 et son Move à 1. À la fin de chaque tour, la figurine peut tenter un autre jet de Will avec le même Target Number. Si réussi, le sort est annulé.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 4,
+        "name": "Clignement",
+        "description": "Ce sort peut cibler n'importe quelle figurine à moins de 12\". Déplacez cette figurine de 4\" dans une direction aléatoire. Une figurine peut faire un jet de Will avec un Target Number égal au jet de lancement pour résister à ce sort. Si réussi, la figurine ne bouge pas. Les créatures non contrôlées tenteront toujours ce jet de Will.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 5,
+        "name": "Dard d'os",
+        "description": "Ce sort tire un petit éclat d'os tranchant. Le lanceur de sorts fait une attaque à distance +5 contre n'importe quelle figurine dans la ligne de vue et à moins de 12\". Cela ne compte pas comme une attaque magique.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 5,
+        "name": "Os de la terre",
+        "description": "Une main squelettique sort du sol et attrape la cheville de la cible. La figurine ne peut prendre aucune action de déplacement jusqu'à ce qu'elle s'échappe. Toute forme de mouvement magique, sauf le sort Saut, permet à une figurine de s'échapper de la main ; sinon, la seule façon de s'échapper est de combattre la main, qui a Fight +0, Health 1. Si la main subit un point de dégâts, elle disparaît et la cible est libre. D'autres figurines en contact de base peuvent attaquer la main ou donner un bonus de soutien. Si la main gagne le combat, elle fait des dégâts normalement. Ce sort ne peut être lancé que contre une cible qui se tient sur le sol. Les grandes créatures ne sont pas affectées par ce sort. La portée maximale pour ce sort est de 18\".",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 10,
+        "name": "Bréuvage de potion",
+        "description": "Le lanceur de sorts crée une Potion mineure de son choix (page 86) qui peut être vendue, stockée dans le coffre du wizard, ou donnée à un membre de la warband. Un wizard (et uniquement un wizard) peut utiliser ce sort pour créer une Potion majeure (page 87). D'abord, il doit déclarer quelle potion il tente de bréuvager et payer le coût des ingrédients listés. Le wizard doit alors lancer le dé pour lancer Bréuvage de potion avec un -4 au jet de lancement. Si réussi, la potion est créée et peut être immédiatement assignée à une figurine de la warband, vendue, ou stockée dans le coffre du wizard. Si échoué, la potion n'est pas créée et l'argent dépensé pour les ingrédients est perdu.",
+        "targetNumber": 12,
+        "type": "Hors jeu (B)"
+    },
+    {
+        "school": 6,
+        "name": "Pont",
+        "description": "Le lanceur de sorts utilise le parchemin d'un long parchemin pour créer un pont temporaire, une rampe ou un escalier. Placez un pont de 6\" de long et 2\" de large n'importe où qui est complètement dans la ligne de vue du lanceur de sorts. Le pont n'a pas d'épaisseur appréciable et est essentiellement bidimensionnel. Les extrémités de ce pont n'ont pas besoin d'être sur le même plan horizontal, ni les extrémités du pont n'ont besoin d'être ancrées sur le terrain, elles peuvent flotter dans les airs. Les figurines peuvent se déplacer le long de ce pont à leur taux de mouvement normal, même en escaladant essentiellement. Chaque lanceur de sorts ne peut avoir qu'un seul pont en jeu à la fois. Chaque fois que le lanceur de sorts s'active, il peut annuler ce sort comme action gratuite. Sinon, lancez un dé à la fin de chaque tour : sur un 1–2 le pont disparaît. Les figurines sur le pont quand il disparaît tomberont au sol.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 2,
+        "name": "Appeler la tempête",
+        "description": "Toutes les attaques d'arc et d'arbalète sont faites avec -1 Shoot pour le reste de la partie. Ce sort peut être lancé plusieurs fois (et par plusieurs lanceurs de sorts), chaque lancement supplémentaire augmentant la pénalité d'un -1 supplémentaire, jusqu'à un maximum de -5.",
+        "targetNumber": 12,
+        "type": "Zone d'effet"
+    },
+    {
+        "school": 9,
+        "name": "Cercle de protection",
+        "description": "Crée un cercle de 3\" de diamètre qu'aucun démon ou créature morte-vivante ne peut entrer ou traverser. Si quelque chose les force à entrer en contact avec le cercle, ils s'arrêtent à son bord. Un lanceur de sorts ne peut avoir qu'un seul cercle de protection actif à la fois, mais il n'a pas besoin de rester dedans. Le lanceur de sorts peut annuler ce sort à la fin de n'importe quel tour. Sinon, lancez un dé à la fin de chaque tour : sur un 1–3 le sort est annulé.",
+        "targetNumber": 12,
+        "type": "Contact"
+    },
+    {
+        "school": 7,
+        "name": "Conscience du combat",
+        "description": "Ce sort donne à la cible une intuition magique sur les mouvements que son adversaire tentera dans un combat. Il accorde à la cible +1 Fight et +1 Armour pour le reste de la partie. Plusieurs lancements de ce sort sur la même cible n'ont aucun effet.",
+        "targetNumber": 12,
+        "type": "Contact"
+    },
+    {
+        "school": 10,
+        "name": "Contrôler un animal",
+        "description": "L'animal cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si le jet échoue, l'animal devient un membre temporaire de la warband du lanceur de sorts. Ce contrôle dure pour le reste de la partie ou jusqu'à ce que le sort soit annulé. Le lanceur de sorts peut dépenser une action pour annuler ce sort. Un lanceur de sorts ne peut contrôler qu'un seul animal à la fois.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 3,
+        "name": "Contrôler un construct",
+        "description": "Le construct cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si le jet échoue, le construct devient un membre temporaire de la warband du lanceur de sorts. Ce contrôle dure pour le reste de la partie ou jusqu'à ce que le sort soit annulé. Le lanceur de sorts peut dépenser une action pour annuler ce sort. Un lanceur de sorts ne peut contrôler qu'un seul construct à la fois.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 8,
+        "name": "Contrôler un démon",
+        "description": "Le démon cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. S'il échoue, il devient un membre temporaire de la warband du lanceur de sorts. Ce contrôle dure pour le reste de la partie ou jusqu'à ce que le sort soit annulé. Le lanceur de sorts peut dépenser une action pour annuler ce sort. Un lanceur de sorts ne peut contrôler qu'un seul démon à la fois.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 5,
+        "name": "Contrôler un mort-vivant",
+        "description": "La créature morte-vivante cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si le jet échoue, la créature morte-vivante devient un membre temporaire de la warband du lanceur de sorts. Ce contrôle dure pour le reste de la partie ou jusqu'à ce que le sort soit annulé. Le lanceur de sorts peut dépenser une action pour annuler ce sort. Un lanceur de sorts ne peut contrôler qu'une seule créature morte-vivante à la fois.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 1,
+        "name": "Effondrement",
+        "description": "Ce sort ne peut cibler que des structures inanimées telles que des bâtiments et des murs. Le lanceur de sorts accélère rapidement le passage du temps dans une petite zone de la structure, la faisant s'effondrer. Cela peut créer un trou de la taille d'une porte à travers n'importe quel mur, qui doit être indiqué sur la table d'une manière ou d'une autre. Le sort peut également être utilisé pour faire s'effondrer une section de sol sous une figurine debout sur un niveau au-dessus du sol. Dans ce cas, la figurine sur le point d'être affectée doit réussir un jet de Move (TN22) ou tomber au niveau inférieur et subir des dégâts appropriés. Si ce sort est lancé sur un mur créé par le sort Mur, le mur est complètement détruit. S'il est lancé sur un terrain contenant un Œil de wizard, l'Œil de wizard est annulé.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 10,
+        "name": "Malédiction",
+        "description": "La cible subit -2 à tous les jets de dés. À la fin de chaque tour, la cible peut faire un jet de Will avec un Target Number égal au jet de lancement (à -2, bien sûr). Si réussi, ce sort est annulé. Malédiction ne peut pas être lancé sur une figurine souffrant déjà des effets d'un sort Malédiction.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 1,
+        "name": "Décomposition",
+        "description": "Le lanceur de sorts sélectionne et attaque l'arme d'une cible, la faisant se décomposer et tomber en morceaux, la rendant inutile pour le reste de la partie. Ce sort n'a aucun effet sur les armes magiques (même celles temporairement enchantées). Ce sort n'a aucun effet sur les créatures (sauf si elles sont spécifiquement identifiées comme étant équipées d'une arme de la Liste générale d'armes et d'armures).",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 9,
+        "name": "Détruire un mort-vivant",
+        "description": "La créature morte-vivante cible doit faire un jet de Will avec un Target Number égal au jet de lancement. Si la créature morte-vivante échoue au jet et que son Will actuel est +2 ou moins, elle est immédiatement réduite à 0 Health et retirée de la table. Si son Will actuel est +3 ou plus, elle subit des dégâts égaux à trois fois le montant par lequel elle a échoué au jet de Will.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 2,
+        "name": "Sphère destructive",
+        "description": "Chaque figurine à moins de 3\" du lanceur de sorts (mais sans compter le lanceur de sorts) subit une attaque magique élémentaire +5.",
+        "targetNumber": 12,
+        "type": "Zone d'effet"
+    },
+    {
+        "school": 9,
+        "name": "Dissipation",
+        "description": "Annule immédiatement l'effet en cours d'un seul lancement d'un seul sort. Il ne peut pas désinvoquer une créature, mais il peut annuler le contrôle d'une créature qui est un membre temporaire d'une warband.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 6,
+        "name": "Mot drainant",
+        "description": "Ce sort dessine une rune de pouvoir brillante dans le ciel. Le lanceur de sorts peut choisir un sort pour que le Mot drainant l'affecte. Tous les jets pour tenter de lancer ce sort particulier sont à -3 pour le reste de la partie. Un lanceur de sorts ne peut avoir qu'un seul sort Mot drainant en effet à la fois. Un seul Mot drainant peut être actif pour chaque sort cible spécifique à la fois.",
+        "targetNumber": 14,
+        "type": "Zone d'effet"
+    },
+    {
+        "school": 2,
+        "name": "Boule élémentaire",
+        "description": "Le lanceur de sorts sélectionne une figurine ennemie à moins de 16\" et dans la ligne de vue et lui lance une boule d'énergie élémentaire destructive. La cible et chaque figurine à moins de 1\" et dans la ligne de vue de la cible subit immédiatement une attaque à distance magique élémentaire +5. Lancez cette attaque à distance séparément pour chaque figurine. Traitez la figurine cible comme l'origine de l'attaque pour déterminer le couvert ou le terrain intervenant pour toutes les autres figurines subissant l'attaque. Ce sort ne peut pas cibler une figurine ennemie qui est même partiellement obscurcie par une autre figurine.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 2,
+        "name": "Éclair élémentaire",
+        "description": "Le lanceur de sorts fait une attaque à distance magique élémentaire +7 contre une figurine cible à moins de 16\" et dans la ligne de vue.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 2,
+        "name": "Marteau élémentaire",
+        "description": "Ce sort est lancé sur une arme. La prochaine fois que la figurine maniant cette arme gagne un round de combat et fait au moins 1 point de dégâts, cette arme inflige 5 points supplémentaires de dégâts magiques élémentaires. S'il est lancé sur une arme normale, qui est ensuite utilisée contre une créature qui est Immunisée aux armes normales, cette arme ne fera que les 5 points de dégâts magiques élémentaires. S'il est lancé sur un arc ou une arbalète, le sort ne s'applique qu'à la prochaine attaque.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 2,
+        "name": "Bouclier élémentaire",
+        "description": "Le lanceur de sorts forme un bouclier flottant qui absorbe les 3 prochains points de dégâts que le lanceur de sorts subirait normalement au combat ou d'une attaque à distance. Une fois que 3 points ont été absorbés, le sort est annulé. Un lanceur de sorts ne peut avoir qu'un seul Bouclier élémentaire actif à la fois.",
+        "targetNumber": 10,
+        "type": "Soi-même"
+    },
+    {
+        "school": 3,
+        "name": "Enchantement intégré",
+        "description": "Ce sort fait que n'importe quel sort Enchanter armure ou Enchanter arme qui est encore actif à la fin d'une partie devient permanent, et l'arme ou l'armure en question devient une arme ou armure magique. L'arme ou armure magique nouvellement créée occupe un emplacement d'objet comme d'habitude.",
+        "targetNumber": 14,
+        "type": "Hors jeu (A)"
+    },
+    {
+        "school": 3,
+        "name": "Enchanter armure",
+        "description": "Ce sort ne peut être lancé que sur une figurine portant une armure. L'armure portée par la cible compte maintenant comme une armure magique et accorde +1 Armour pour le reste de la partie. Plusieurs lancements de ce sort sur la même cible n'ont aucun effet.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 3,
+        "name": "Enchanter arme",
+        "description": "Ce sort cible une arme au choix du lanceur de sorts. S'il est lancé sur une arme de corps à corps, cette arme compte comme une arme magique avec +1 Fight. Les arcs et arbalètes comptent comme des armes magiques avec +1 Shoot, mais les attaques faites avec eux ne comptent pas comme des attaques magiques. Ce sort peut être lancé sur une seule flèche ou carreau d'arbalète, auquel cas cette munition donne +1 Shoot et son attaque compte comme magique, mais uniquement pour la prochaine attaque à distance. Ce sort ne peut être lancé qu'une fois sur chaque arme. Lors de l'utilisation à la fois d'une arme de projectile magique et de munitions magiques, le tireur peut choisir d'appliquer le bonus de l'un ou l'autre, mais pas les deux.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 6,
+        "name": "Rune explosive",
+        "description": "Le lanceur de sorts dessine une rune de pouvoir brillante et lumineuse sur le sol ou un mur n'importe où à moins de 4\" et dans la ligne de vue. Un marqueur doit être placé sur la table pour représenter la rune. Si un personnage ou une créature qui ne faisait pas partie de la warband du lanceur de sorts au début de la partie se déplace à moins de 1\" de la rune, elle explose, et chaque figurine, amie ou ennemie, à moins de 2\" subit une attaque magique immédiate +5. Notez que si la rune est placée à moins de 1\" d'une figurine, elle n'explose pas immédiatement – cette figurine doit bouger pour la déclencher. Un lanceur de sorts peut avoir jusqu'à trois de ces runes en jeu à la fois. À la fin de n'importe quel tour, il peut choisir d'annuler toutes ou certaines de ses runes. Si le lanceur de sorts qui a placé une rune n'est plus sur la table, lancez un dé pour chaque rune à la fin de chaque tour : sur un 11+ la rune disparaît.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 10,
+        "name": "Familier",
+        "description": "Le lanceur de sorts gagne un familier, qui peut prendre la forme de n'importe quelle petite créature. Il n'est pas représenté sur la table, sauf si le joueur veut l'inclure sur la figurine du lanceur de sorts. Un lanceur de sorts avec un familier gagne +2 Health (écrit comme une stat divisée). Si le lanceur de sorts est jamais réduit à 1 Health ou moins, le familier est détruit. Au début de la prochaine partie, le lanceur de sorts revient à sa Health normale, sauf si un autre sort Familier est lancé avec succès.",
+        "targetNumber": 10,
+        "type": "Hors jeu (B)"
+    },
+    {
+        "school": 1,
+        "name": "Action rapide",
+        "description": "Ce sort ne peut être lancé que sur un membre de la warband du lanceur de sorts ou une créature non contrôlée. Cette figurine s'activera à la fin de la phase actuelle au lieu de sa phase normale. Par exemple, si un apprentice lance ce sort sur une créature non contrôlée, la créature s'activera à la fin de la phase Apprentice de ce joueur au lieu de la phase Créature. Les lanceurs de sorts ne peuvent pas lancer ce sort sur eux-mêmes, ni sur une figurine qui s'est déjà activée dans le tour actuel.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 1,
+        "name": "Pieds agiles",
+        "description": "La cible reçoit +2 Move pour le reste de la partie. Plusieurs lancements de Pieds agiles sur la même cible n'ont aucun effet.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 10,
+        "name": "Brouillard",
+        "description": "Placez une ligne de brouillard, 6\" de long, 3\" de haut et 1\" d'épaisseur n'importe où sur la table tant qu'une partie de celle-ci est dans la ligne de vue du lanceur de sorts et que tout est à moins de 24\". Les figurines peuvent se déplacer à travers le brouillard sans pénalité, mais la ligne de vue ne peut pas être tracée à travers. Au début de chaque nouveau tour, lancez un dé. Sur un résultat de 1–4 le brouillard se dissipe et est retiré de la table.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 4,
+        "name": "Or des fous",
+        "description": "Ce sort ne peut être lancé que sur une figurine portant un jeton de trésor. Cette figurine doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si elle échoue, le lanceur de sorts peut prendre le jeton de trésor de la figurine et le déplacer jusqu'à 4\" dans n'importe quelle direction, à condition que l'emplacement final soit dans la ligne de vue du lanceur de sorts.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 6,
+        "name": "Plume furieuse",
+        "description": "La cible est attaquée par une plume animée tranchante. Bien que la plume ne fasse aucun dégât, elle est très irritante et extrêmement distrayante. Pendant l'attaque, la cible subit -1 Move, -2 Fight, -4 Shoot, et -2 à tous les jets de lancement. Chaque fois que la cible est activée, elle peut faire un jet de Will avec un Target Number égal au jet de lancement – si réussi, la plume est attrapée et détruite. Plusieurs lancements de Plume furieuse contre la même cible n'ont aucun effet.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 4,
+        "name": "Lueur",
+        "description": "Une lumière brillante entoure la figurine cible. Pour le reste de la partie, toutes les attaques à distance contre cette figurine de n'importe quelle source sont à +3. Plusieurs lancements de Lueur sur la même cible n'ont aucun effet.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 3,
+        "name": "Grenade",
+        "description": "Le lanceur de sorts prend un objet, communément une simple pierre, l'imprègne d'énergie magique et le lance sur sa cible, où il explose en centaines de fragments. Le lanceur de sorts choisit un point cible à moins de 14\". Chaque figurine, y compris les alliés, à moins de 1,5\" de ce point subit immédiatement une attaque à distance magique +3. Utilisez le point cible comme origine de l'attaque pour déterminer la ligne de vue et le couvert.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 9,
+        "name": "Soin",
+        "description": "Ce sort restaure jusqu'à 5 points de Health perdus à une figurine cible à moins de 6\". Ce sort ne peut pas amener un modèle au-dessus de sa Health de départ. Ce sort n'a aucun effet sur les morts-vivants ou les constructs.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 4,
+        "name": "Soldat illusionniste",
+        "description": "Un soldat illusionniste devient un membre temporaire de la warband pour la prochaine bataille (s'il est lancé Hors jeu) ou jusqu'à la fin de la partie (s'il est lancé pendant une bataille). Ce soldat peut être de n'importe quel type trouvé dans les Tableaux de soldats (pages 30 et 31) sauf un apothicaire. Ce soldat ne peut pas ramasser de trésor, ni faire de dégâts, mais comptera autrement comme un soldat régulier pour tous les autres usages - il peut s'engager au combat, bien qu'il ne fasse aucun dégât s'il gagne (il aurait toujours l'option de repousser son adversaire, cependant), prêter soutien à d'autres figurines au combat, etc. Si le soldat illusionniste subit des dégâts de n'importe quel type, il est retiré. Une warband ne peut avoir qu'un seul soldat illusionniste à la fois. Le joueur doit révéler quel membre de sa warband est le soldat illusionniste.",
+        "targetNumber": 12,
+        "type": "Hors jeu (B) ou Contact"
+    },
+    {
+        "school": 8,
+        "name": "Diablotin",
+        "description": "Le lanceur de sorts place un diablotin (page 184) sur la table n'importe où dans la ligne de vue du lanceur de sorts, mais pas plus près que 3\" de toute autre figurine. Le diablotin suit les règles normales pour les créatures non contrôlées et s'activera dans la prochaine phase Créature. Si le lanceur de sorts lance ce sort une deuxième fois, le premier diablotin disparaît immédiatement.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 4,
+        "name": "Invisibilité",
+        "description": "La figurine cible devient invisible. Aucune figurine ne peut se déplacer au combat avec la figurine invisible, ni la cibler avec une attaque ou un sort (bien qu'elle puisse encore être affectée par des effets de zone, comme le rayon d'explosion d'un sort Grenade). Si la figurine invisible se déplace au combat, lance un sort, ou ramasse un jeton de trésor, le sort Invisibilité est annulé. Ce sort peut être lancé sur une figurine portant déjà un trésor, rendant les deux invisibles. Dans ce cas, si la figurine laisse tomber le trésor, le sort est annulé.",
+        "targetNumber": 12,
+        "type": "Contact"
+    },
+    {
+        "school": 8,
+        "name": "Saut",
+        "description": "Ce sort ne peut être lancé que sur un membre de la warband du lanceur de sorts. Déplacez immédiatement la figurine cible jusqu'à 10\" dans n'importe quelle direction, y compris verticalement. Ce déplacement doit être soit en ligne droite soit en arc. Il ne peut pas tourner autour des coins. Si ce déplacement laisse la figurine au-dessus du sol, elle tombe immédiatement, subissant des dégâts normalement. Si la cible porte un trésor, ce déplacement est réduit à 5\". Ce déplacement ne peut pas amener une figurine hors de la table ou au combat. La cible du sort Saut ne peut prendre aucune autre action ce tour, bien qu'elle ait pu prendre des actions précédemment.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 7,
+        "name": "Contrôle mental",
+        "description": "La figurine cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si elle échoue, la cible rejoint temporairement la warband du lanceur de sorts, s'activant normalement. Après que la figurine s'active chaque tour, elle doit faire un autre jet de Will avec un Target Number égal au jet de lancement. Si réussi, le sort est annulé et la figurine retourne à son allégeance normale. Un lanceur de sorts ne peut avoir qu'un seul sort Contrôle mental actif à la fois. Une figurine sous Contrôle mental ne peut pas délibérément prendre une action qui lui cause des dégâts immédiats (comme tomber de plus de 3\") mais peut être déplacée au combat et peut attaquer une figurine ennemie. Une figurine sous Contrôle mental n'est pas autorisée à se déplacer hors de la table. Un lanceur de sorts peut annuler un Contrôle mental actif à la fin de n'importe quel tour. Ce sort n'a aucun effet sur les lanceurs de sorts mais peut être lancé contre n'importe quelle autre figurine sauf si elles sont spécifiquement notées comme immunes.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 7,
+        "name": "Verrouillage mental",
+        "description": "La cible de ce sort devient immunisée aux sorts Contrôle mental et Suggestion pour le reste de la partie, et tous les sorts Contrôle mental actuels sur la figurine sont annulés. La figurine gagne +2 Will pour le reste de la partie.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 9,
+        "name": "Guérison miraculeuse",
+        "description": "Wizard uniquement. Ce sort peut être utilisé de plusieurs façons différentes. Un lancement réussi de ce sort supprimera toutes les blessures permanentes d'une figurine. Par exemple, un wizard souffrant de Doigts perdus fait repousser tous ses doigts manquants, peu importe combien de fois il a subi cette blessure particulière. Ou, il peut être lancé sur une figurine Gravement blessée – si réussi, le soldat est guéri et peut participer à la prochaine partie sans pénalité. Enfin, il peut être utilisé pour tenter de ramener une figurine d'entre les morts. La figurine doit être morte dans la partie qui vient d'être jouée, et utiliser le sort de cette façon entraîne une pénalité de -4 au jet de lancement. Si réussi, la figurine est restaurée à la vie et peut participer à la prochaine partie sans pénalité. Si Guérison miraculeuse est lancé en utilisant un parchemin, il ne peut pas être utilisé pour ressusciter les morts.",
+        "targetNumber": 16,
+        "type": "Hors jeu (A)"
+    },
+    {
+        "school": 10,
+        "name": "Boue",
+        "description": "Tout le sol à moins de 3\" d'un point cible devient un terrain difficile.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 1,
+        "name": "Pétrification",
+        "description": "La figurine cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si elle échoue, elle ne reçoit aucune action dans sa prochaine activation. De plus, la figurine subit -3 Fight (à un minimum de +0) et ne peut pas avoir Saut lancé sur elle jusqu'à ce qu'elle fasse sa prochaine action de déplacement. Les grandes créatures reçoivent +8 à leur jet de Will pour résister à ce sort.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 8,
+        "name": "Fléau d'insectes",
+        "description": "La figurine cible est attaquée par un nuage d'insectes piquants ou mordants qui irritent et distraient. Le nuage d'insectes a un rayon de 1\" centré sur, et se déplaçant avec, la figurine cible. Il affecte toutes les figurines, y compris la figurine cible, complètement ou partiellement dans ce rayon. Pendant qu'elle est harcelée par les insectes, une figurine a -4 Fight et -4 Shoot (à un minimum de +0) et -2 aux jets de lancement. Après que cette figurine s'active chaque tour, elle peut faire un jet de Will avec un Target Number égal au jet de lancement. Si réussi, le sort est annulé. D'autres figurines dans le rayon peuvent simplement s'éloigner pour s'échapper. Une figurine ne peut jamais être affectée par un seul sort Fléau d'insectes à la fois, que ce soit comme cible ou en vertu d'être dans le rayon de 1\". Les grandes créatures, les morts-vivants et les constructs sont immunisés à ce sort.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 8,
+        "name": "Déchirure planaire",
+        "description": "Le lanceur de sorts crée une petite déchirure dans le tissu de l'univers. Cette faille est douloureuse pour les humains et les créatures, mais mortelle pour les démons. Le lanceur de sorts sélectionne un point cible. Toutes les figurines à moins de 2\" de ce point doivent faire un jet de Will avec un Target Number égal au jet de lancement ou subir 2 points de dégâts. Les démons qui échouent au jet de Will subissent des dégâts égaux au jet de lancement.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 8,
+        "name": "Marche planaire",
+        "description": "Bien que le lanceur de sorts reste au même emplacement physique, il se déplace brièvement entre les plans d'existence. Pour le reste de ce tour, il peut ignorer tout terrain en se déplaçant, marchant ainsi à travers les murs ou à travers les gouffres. Il ne peut pas être la cible d'attaques à distance ou de sorts. Le lanceur de sorts ne sera jamais considéré au combat pendant le tour, ni ne peut être attaqué par une figurine. Il ne peut cependant pas ramasser de trésor ou affecter d'une manière quelconque d'autres figurines ou le terrain sur la table. S'il porte un trésor, il le laisse tomber. Il est incroyablement épuisant de se déplacer entre les plans d'existence, donc si un lanceur de sorts tente de lancer ce sort dans un deuxième tour consécutif, il subit un modificateur de -5 à son jet de lancement, -10 s'il tente trois tours d'affilée, et -15 au quatrième tour et au-delà.",
+        "targetNumber": 10,
+        "type": "Soi-même"
+    },
+    {
+        "school": 10,
+        "name": "Dard empoisonné",
+        "description": "Faites une attaque à distance empoisonnée immédiate +3 contre la figurine cible. C'est une attaque non magique.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 8,
+        "name": "Possession",
+        "description": "Ce sort ne peut être lancé que sur un membre permanent ou temporaire de la propre warband du lanceur de sorts, sauf le wizard, l'apprentice ou les démons. La cible est possédée par un démon et gagne +2 Fight, +1 Armour, et -2 Will et compte comme un démon (c'est-à-dire qu'il sera affecté par Bannir, Contrôler un démon, Cercle de protection, etc.). Cette figurine ne peut pas faire partie d'une activation de groupe. Si elle est retirée du jeu pour une raison quelconque (comme être touchée par un sort Bannir), vérifiez la survie du personnage comme d'habitude. Un lanceur de sorts ne peut avoir qu'un seul sort Possession actif à la fois.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 6,
+        "name": "Mot de pouvoir",
+        "description": "Ce sort dessine une rune de pouvoir brillante dans le ciel. Le lanceur de sorts peut choisir un sort pour que le Mot de pouvoir l'affecte. Tous les jets pour lancer ce sort particulier sont à +3 pour chaque lanceur de sorts pour le reste de la partie. Un lanceur de sorts ne peut avoir qu'un seul sort Mot de pouvoir en effet à la fois. Un seul Mot de pouvoir peut être actif pour chaque sort cible spécifique à la fois.",
+        "targetNumber": 14,
+        "type": "Zone d'effet"
+    },
+    {
+        "school": 6,
+        "name": "Poussée",
+        "description": "La cible subit une attaque immédiate +10. Au lieu de subir des dégâts de cette attaque, la cible est déplacée de 1\" directement loin du lanceur de sorts pour chaque point de dégâts qu'elle aurait subi. Si cela pousse la cible vers le bord de la table ou un morceau de terrain de plus de 1⁄2\" de haut, elle s'arrête immédiatement. D'autres figurines ne s'arrêtent pas (ou ne sont pas touchées par) une figurine poussée – elles sont supposées s'écarter. Si ce sort est lancé depuis sous une figurine, il la poussera vers le haut. Si la cible est poussée vers le haut ou depuis une hauteur, elle subit des dégâts de chute normalement. Ce sort peut pousser une figurine hors du combat, et comme ce n'est pas une attaque à distance, la cible n'est pas randomisée.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 5,
+        "name": "Invoquer un zombie",
+        "description": "Le lanceur de sorts ajoute un zombie (page 193) à sa warband comme membre temporaire. Si le sort est lancé avant la partie, le zombie peut être déployé normalement. S'il est lancé pendant une partie, le zombie apparaît en contact de base avec le lanceur de sorts. Une warband ne peut avoir qu'un seul zombie invoqué à la fois. Si le zombie est tué ou sort de la table, Invoquer un zombie peut être lancé à nouveau pour en créer un autre.",
+        "targetNumber": 10,
+        "type": "Hors jeu (B) ou Contact"
+    },
+    {
+        "school": 7,
+        "name": "Révéler un secret",
+        "description": "Ce sort transmet des connaissances sur un trésor perdu. Chaque lancement réussi de ce sort avant une partie permet au joueur de faire deux jets pour un seul jeton de trésor (autre que le trésor central, qui n'est pas affecté par ce sort) après la partie et de choisir lequel prendre.",
+        "targetNumber": 12,
+        "type": "Hors jeu (B)"
+    },
+    {
+        "school": 2,
+        "name": "Tir dispersé",
+        "description": "Le lanceur de sorts fait une attaque à distance magique élémentaire +0 contre chaque figurine ennemie (soit d'une warband adverse soit d'une créature non contrôlée) à moins de 12\" et dans la ligne de vue. Cela peut inclure des figurines ennemies au combat, bien que les règles normales pour tirer au combat soient suivies dans ce cas.",
+        "targetNumber": 12,
+        "type": "Zone d'effet"
+    },
+    {
+        "school": 9,
+        "name": "Bouclier",
+        "description": "La cible reçoit +2 Armour pour le reste de la partie. La règle d'armure maximale s'applique toujours (voir page 36). Plusieurs lancements de Bouclier sur la même cible n'ont aucun effet.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 1,
+        "name": "Ralentissement",
+        "description": "La cible est réduite à un maximum d'une action par activation (qui peut être n'importe quelle action, ce n'est pas forcément un déplacement). Elle peut faire un jet de Will contre le jet de lancement à la fin de chacune de ses activations. Si réussi, le sort est annulé.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 5,
+        "name": "Dévoreur de sorts",
+        "description": "Lancer ce sort fait que le lanceur de sorts subit immédiatement 1 point de dégâts. Lorsque ce sort est lancé, il annule les effets d'un seul lancement d'un seul sort actuellement en jeu. Ce sort ne peut pas désinvoquer une créature, mais il peut annuler le contrôle d'une créature.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 5,
+        "name": "Vol de santé",
+        "description": "La cible doit faire immédiatement un jet de Will avec un Target Number égal au jet de lancement. Si échoué, la cible perd immédiatement 3 Health et le lanceur de sorts regagne 3 Health. Le lanceur de sorts gagne 3 Health, même si la cible avait moins de Health que cela restant. Cela ne peut pas amener le lanceur de sorts au-dessus de sa Health de départ. Ce sort n'a aucun effet sur les morts-vivants ou les constructs. Un lanceur de sorts peut cibler un membre de sa propre warband – s'il le fait, cependant, la cible quitte immédiatement (et définitivement) la warband et est traitée comme une créature non contrôlée pour le reste de la partie.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 3,
+        "name": "Force",
+        "description": "La cible reçoit +2 Fight. Plusieurs sorts Force sur la même cible n'ont aucun effet.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 5,
+        "name": "Frappe mortelle",
+        "description": "Ce sort cible une figurine à moins de 8\". La cible doit faire un jet de Will avec un Target Number égal au jet de lancement ou être immédiatement réduite à 0 Health. Toutes les figurines peuvent renforcer leur jet de Will pour résister à ce sort, même les non-lanceurs de sorts. Le lanceur de sorts perd immédiatement 1 Health en tentant ce sort (même s'il est lancé avec succès), en plus de toute perte subie par l'échec ou le renforcement. Ce sort n'a aucun effet sur les morts-vivants ou les constructs.",
+        "targetNumber": 18,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 7,
+        "name": "Suggestion",
+        "description": "La cible de ce sort laisse immédiatement tomber tous les jetons de trésor qu'elle porte. Le lanceur de sorts peut déplacer la figurine jusqu'à 3\" dans n'importe quelle direction à condition que cela ne déplace pas la figurine au combat ou ne lui cause aucun dégât immédiat (par exemple tomber de plus de 3\"). La cible de ce sort peut faire un jet de Will avec un Target Number égal au jet de lancement. Si réussi, le sort n'a aucun effet.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 8,
+        "name": "Invoquer un démon",
+        "description": "Placez immédiatement un démon sur la table à moins de 1\" du lanceur de sorts. Il ne peut pas être placé directement au combat. Ce démon est considéré comme étant sous les effets d'un sort Contrôler un démon par le même lanceur de sorts, et donc ce sort ne peut pas être lancé si le lanceur de sorts contrôle déjà un démon. Le type de démon invoqué dépend du montant par lequel le lanceur de sorts a réussi son jet de lancement : 0–5 diablotin (page 184), 6–12 démon mineur (page 185), 13+ démon majeur (page 185). Si un lanceur de sorts lance un 1 en tentant de lancer ce sort, il invoque un démon non contrôlé et doit placer ce démon au combat avec le lanceur de sorts. Lancez un dé pour déterminer le type de démon 1–10 diablotin, 11–17 démon mineur, 18+ démon majeur. Un lanceur de sorts ne peut pas renforcer un jet de 1 lors du lancement de ce sort mais il n'y a pas d'autre limite sur le renforcement de ce sort. Il peut être renforcé au-dessus de 18.",
+        "targetNumber": 12,
+        "type": "Contact"
+    },
+    {
+        "school": 3,
+        "name": "Télékinésie",
+        "description": "Le lanceur de sorts peut déplacer n'importe quel jeton de trésor à moins de 16\" jusqu'à 6\" dans n'importe quelle direction, tant qu'il reste dans la ligne de vue tout le temps. Si le trésor sort de la ligne de vue, il tombe immédiatement droit au sol. Ce sort n'a aucun effet sur un jeton de trésor qui a des exigences spéciales pour comment et quand il peut être ramassé, ni sur un porté par une figurine. Ce sort ne peut pas cibler le trésor central, jusqu'à ce que ce trésor ait été ramassé pour la première fois.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 4,
+        "name": "Téléportation",
+        "description": "Le lanceur de sorts se déplace immédiatement à n'importe quel emplacement dans la ligne de vue, mais ne peut prendre aucune autre action ce tour après avoir lancé ce sort. Ce sort ne peut pas être utilisé pour entrer au combat ou pour se déplacer hors de la table.",
+        "targetNumber": 10,
+        "type": "Soi-même"
+    },
+    {
+        "school": 1,
+        "name": "Réserve temporelle",
+        "description": "Le lanceur de sorts capture un fragment de son propre présent pour le sauvegarder pour une utilisation future. Pour lancer ce sort, le lanceur de sorts doit pouvoir prendre deux actions pendant son activation. Il doit dépenser la première action pour lancer Réserve temporelle. Si réussi, la deuxième action est perdue. Ce lanceur de sorts est maintenant considéré comme ayant une 'action supplémentaire' stockée qu'il peut utiliser dans un tour futur. Cette action ne peut être utilisée que pendant l'activation du lanceur de sorts et peut donner au lanceur de sorts trois actions en une activation.",
+        "targetNumber": 14,
+        "type": "Soi-même"
+    },
+    {
+        "school": 1,
+        "name": "Marche temporelle",
+        "description": "Wizard uniquement. Le wizard s'activera à nouveau dans la phase Apprentice et la phase Soldat. C'est en plus des figurines qui peuvent normalement s'activer dans ces phases. Le wizard ne peut pas activer de soldats supplémentaires ou faire partie d'une activation de groupe dans ces phases. Le wizard peut effectuer une action dans chacune de ces deux phases et peut prendre n'importe quelle action – il n'est pas limité au déplacement. Si le wizard s'est déplacé du tout dans une activation précédente pendant le tour, toutes les actions de déplacement supplémentaires sont à demi-vitesse. Si un wizard lance ce sort dans des tours consécutifs, il subit immédiatement 8 points de dégâts.",
+        "targetNumber": 14,
+        "type": "Soi-même"
+    },
+    {
+        "school": 4,
+        "name": "Transposition",
+        "description": "Ce sort échange la position de deux figurines sur la table. Les deux figurines transposées doivent toutes deux être dans la ligne de vue du lanceur de sorts et à moins de 12\" l'une de l'autre. Le lanceur de sorts peut lancer Transposition pour s'échanger avec une autre figurine. Les membres de warbands adverses sont des cibles éligibles pour être transposés mais peuvent faire un jet de Will avec un Target Number égal au jet de lancement pour tenter de résister au sort. Si réussi, le sort est annulé et aucune figurine n'est déplacée. Les figurines amies et les créatures non contrôlées ne feront pas de tels jets de Will.",
+        "targetNumber": 12,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 7,
+        "name": "Vision vraie",
+        "description": "Le lanceur de sorts, et toutes les figurines amies à moins de 6\" du lanceur de sorts, peuvent voir les figurines invisibles et sont immunisées aux effets du sort Beauté. De plus, si une figurine invisible est à moins de 6\" du lanceur de sorts, le sort Invisibilité est annulé. Si un Soldat illusionniste est à moins de 6\" du lanceur de sorts, il est immédiatement retiré de la table.",
+        "targetNumber": 10,
+        "type": "Soi-même"
+    },
+    {
+        "school": 2,
+        "name": "Mur",
+        "description": "Ce sort crée un mur de 6\" de long et 3\" de haut, dont une partie doit être à moins de 10\" et dans la ligne de vue du lanceur de sorts. Ce mur peut être escaladé normalement. À la fin de chaque tour, après le tour dans lequel le sort a été lancé, lancez un dé, sur un 1–4 le mur disparaît.",
+        "targetNumber": 10,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 7,
+        "name": "Œil de wizard",
+        "description": "Ce sort peut être lancé sur n'importe quelle caractéristique de terrain à moins de 12\" qui a un côté plat, comme la plupart des ruines. Placez un jeton sur ou à côté de la caractéristique de terrain pour représenter l'Œil de wizard. Pour le reste de la partie, le lanceur peut choisir de tracer la ligne de vue depuis l'Œil de wizard au lieu de la figurine lors du lancement de sorts. L'Œil de wizard a un champ de vision de 180 degrés. Un lanceur de sorts ne peut maintenir qu'un seul Œil de wizard à la fois. Si le morceau de terrain sur lequel l'Œil de wizard est placé est endommagé ou détruit (comme par un sort Effondrement), le sort est annulé. Le lanceur de sorts peut annuler ce sort à la fin de n'importe quel tour.",
+        "targetNumber": 8,
+        "type": "Ligne de vue"
+    },
+    {
+        "school": 6,
+        "name": "Écrire un parchemin",
+        "description": "Ce sort crée un parchemin. Le parchemin doit être d'un sort que le lanceur de sorts connaît ou d'un sort pour lequel il possède le grimoire. Le parchemin peut être vendu, donné à une figurine, ou stocké dans le coffre du wizard.",
+        "targetNumber": 12,
+        "type": "Hors jeu (A)"
+    }
+]

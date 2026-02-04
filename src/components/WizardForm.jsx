@@ -12,7 +12,7 @@ const DEFAULT_WIZARD_STATS = {
 };
 
 const DEFAULT_APPRENTICE_STATS = {
-  move: 7,
+  move: 6,
   fight: 0,
   shoot: 0,
   armour: 10,

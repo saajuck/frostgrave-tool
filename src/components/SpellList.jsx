@@ -1,9 +1,32 @@
 import { useState } from 'react';
 import { spells, getSchoolById, getSpellAlignment } from '../utils/dataLoader';
+import SpellCard from './SpellCard';
 
 function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
   const [searchTerm, setSearchTerm] = useState('');
   const wizardSchoolData = getSchoolById(wizardSchool);
+
+  // Statistiques de sélection (pour appliquer les contraintes)
+  const selectionStats = (() => {
+    const stats = {
+      own: 0,
+      alignedCounts: {},
+      neutral: 0,
+    };
+
+    selectedSpells.forEach(spell => {
+      const alignment = getSpellAlignment(spell.school, wizardSchool);
+      if (alignment === 'own') {
+        stats.own += 1;
+      } else if (alignment === 'aligned') {
+        stats.alignedCounts[spell.school] = (stats.alignedCounts[spell.school] || 0) + 1;
+      } else if (alignment === 'neutral') {
+        stats.neutral += 1;
+      }
+    });
+
+    return stats;
+  })();
 
   // Obtenir tous les sorts uniques par école
   const spellsBySchool = {};
@@ -23,9 +46,11 @@ function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
     const spell = spells.find(s => s.name === spellName);
     if (!spell) return;
 
+    let alignment = null;
+
     // Vérifier si le sort est opposé
     if (wizardSchool) {
-      const alignment = getSpellAlignment(spell.school, wizardSchool);
+      alignment = getSpellAlignment(spell.school, wizardSchool);
       if (alignment === 'opposed') {
         return; // Ne pas permettre la sélection des sorts opposés
       }
@@ -35,6 +60,17 @@ function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
     if (isSelected) {
       onSpellsChange(selectedSpells.filter(s => s.name !== spellName));
     } else {
+      // Appliquer les contraintes de sélection
+      if (alignment === 'own' && selectionStats.own >= 3) {
+        return;
+      }
+      if (alignment === 'aligned' && (selectionStats.alignedCounts[spell.school] || 0) >= 1) {
+        return;
+      }
+      if (alignment === 'neutral' && selectionStats.neutral >= 2) {
+        return;
+      }
+
       onSpellsChange([...selectedSpells, spell]);
     }
   };
@@ -66,9 +102,12 @@ function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
     );
   };
 
+  const alignedSchoolsSelected = Object.keys(selectionStats.alignedCounts).length;
+  const maxAlignedSchools = wizardSchoolData?.aligned?.length || 0;
+
   return (
     <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between md:gap-4">
         <input
           type="text"
           placeholder="Rechercher un sort..."
@@ -76,6 +115,16 @@ function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
           onChange={(e) => setSearchTerm(e.target.value)}
           className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+      </div>
+
+      <div className="text-xs text-gray-700 bg-purple-50 border border-purple-100 rounded p-3 space-y-1">
+        <p className="font-semibold">Règles de sélection des sorts :</p>
+        <p>- 3 sorts de votre école</p>
+        <p>- 1 sort de chaque école alliée</p>
+        <p>- 2 sorts des écoles neutres</p>
+        <p className="mt-1 text-[11px] text-gray-600">
+          Actuellement : {selectionStats.own}/3 propres, {alignedSchoolsSelected}/{maxAlignedSchools} écoles alliées, {selectionStats.neutral}/2 neutres.
+        </p>
       </div>
 
       {/* Sorts sélectionnés */}
@@ -86,27 +135,14 @@ function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {selectedSpells.map(spell => (
-              <div key={spell.name} className="border border-blue-200 rounded-lg p-3 bg-blue-50">
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <div className="font-semibold text-gray-800">{spell.name}</div>
-                    <div className="text-sm text-gray-600 mt-1">
-                      TN: {spell.targetNumber} • {spell.type}
-                    </div>
-                    {getAlignmentBadge(spell.school)}
-                    <div className="text-xs text-gray-500 mt-2 line-clamp-2">
-                      {spell.description}
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => toggleSpell(spell.name)}
-                    className="ml-2 text-red-600 hover:text-red-800"
-                    title="Retirer"
-                  >
-                    ×
-                  </button>
-                </div>
-              </div>
+              <SpellCard
+                key={spell.name}
+                spell={spell}
+                wizardSchool={wizardSchool}
+                variant="selected"
+                isSelected
+                onRemove={() => toggleSpell(spell.name)}
+              />
             ))}
           </div>
         </div>
@@ -127,7 +163,8 @@ function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
               return parseInt(schoolIdA) - parseInt(schoolIdB);
             })
             .map(([schoolId, schoolSpells]) => {
-            const schoolData = getSchoolById(parseInt(schoolId));
+            const schoolIdNum = parseInt(schoolId);
+            const schoolData = getSchoolById(schoolIdNum);
             const filteredSchoolSpells = schoolSpells.filter(spell =>
               spell.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
               spell.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -135,51 +172,54 @@ function SpellList({ wizardSchool, selectedSpells, onSpellsChange }) {
 
             if (filteredSchoolSpells.length === 0) return null;
 
-            const isWizardSchool = wizardSchool && parseInt(schoolId) === wizardSchool;
+            const isWizardSchool = wizardSchool && schoolIdNum === wizardSchool;
+
+            // Déterminer si l'école est désactivée à cause des contraintes
+            const schoolAlignment = wizardSchool ? getSpellAlignment(schoolIdNum, wizardSchool) : null;
+            const alignedCountForSchool = selectionStats.alignedCounts[schoolIdNum] || 0;
+            const schoolDisabled =
+              schoolAlignment === 'opposed' ||
+              (schoolAlignment === 'own' && selectionStats.own >= 3) ||
+              (schoolAlignment === 'aligned' && alignedCountForSchool >= 1) ||
+              (schoolAlignment === 'neutral' && selectionStats.neutral >= 2);
 
             return (
-              <div key={schoolId} className={`border rounded-lg p-4 ${isWizardSchool ? 'border-purple-300 bg-purple-50' : 'border-gray-200'}`}>
-                <h4 className={`font-semibold mb-2 ${isWizardSchool ? 'text-purple-700' : 'text-gray-700'}`}>
+              <div
+                key={schoolId}
+                className={`border rounded-lg p-4 ${
+                  schoolDisabled
+                    ? 'border-gray-200 bg-gray-100 opacity-60'
+                    : isWizardSchool
+                    ? 'border-purple-300 bg-purple-50'
+                    : 'border-gray-200'
+                }`}
+              >
+                <h4
+                  className={`font-semibold mb-1 ${
+                    schoolDisabled ? 'text-gray-500' : isWizardSchool ? 'text-purple-700' : 'text-gray-700'
+                  }`}
+                >
                   {schoolData?.name || `École ${schoolId}`}
                   {isWizardSchool && <span className="ml-2 text-xs text-purple-600">(Votre école)</span>}
                 </h4>
+                {schoolDisabled && (
+                  <p className="text-[11px] text-gray-500 mb-2">
+                    Limite atteinte pour cette école — aucun sort supplémentaire ne peut être sélectionné.
+                  </p>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {filteredSchoolSpells.map(spell => {
                     const isSelected = selectedSpells.some(s => s.name === spell.name);
-                    const isOpposed = isSpellOpposed(spell.school);
                     return (
-                      <div
+                      <SpellCard
                         key={spell.name}
-                        className={`border rounded-lg p-3 transition ${
-                          isOpposed
-                            ? 'border-gray-200 bg-gray-100 opacity-60 cursor-not-allowed'
-                            : isSelected
-                            ? 'border-blue-400 bg-blue-50 cursor-pointer'
-                            : 'border-gray-200 hover:border-blue-300 hover:shadow-sm cursor-pointer'
-                        }`}
-                        onClick={() => !isOpposed && toggleSpell(spell.name)}
-                      >
-                        <div className="flex justify-between items-start mb-1">
-                          <div className={`font-semibold ${isOpposed ? 'text-gray-500' : 'text-gray-800'}`}>
-                            {spell.name}
-                          </div>
-                          {isSelected && !isOpposed && (
-                            <span className="text-blue-600 font-bold">✓</span>
-                          )}
-                        </div>
-                        <div className={`text-sm ${isOpposed ? 'text-gray-400' : 'text-gray-600'}`}>
-                          TN: {spell.targetNumber} • {spell.type}
-                        </div>
-                        {getAlignmentBadge(spell.school)}
-                        <div className={`text-xs mt-2 ${isOpposed ? 'text-gray-400' : 'text-gray-500'}`}>
-                          {spell.description}
-                        </div>
-                        {isOpposed && (
-                          <div className="text-xs text-red-600 font-semibold mt-2">
-                            Sort opposé - Non sélectionnable
-                          </div>
-                        )}
-                      </div>
+                        spell={spell}
+                        wizardSchool={wizardSchool}
+                        variant="available"
+                        isSelected={isSelected}
+                        disabled={schoolDisabled}
+                        onClick={() => toggleSpell(spell.name)}
+                      />
                     );
                   })}
                 </div>

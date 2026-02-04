@@ -24,7 +24,7 @@ function WarbandManager() {
   // Calculer le coût total
   const calculateTotalCost = () => {
     let total = 0;
-    if (warband.apprentice) total += 200; // Apprentice coûte 200
+    if (warband.apprentice) total += 100;  
     warband.soldiers.forEach(soldier => {
       total += soldier.cost || 0;
     });

@@ -179,7 +179,7 @@ function WizardForm({ wizard, apprentice, onWizardChange, onApprenticeChange }) 
             className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
           />
           <label htmlFor="hasApprentice" className="text-lg font-semibold text-gray-700">
-            Avoir un Apprenti (+200 gold)
+            Avoir un Apprenti (+100 gold)
           </label>
         </div>
         {hasApprentice && (
